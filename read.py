@@ -5,6 +5,11 @@ with open('reviews.txt', 'r') as f:
 		data.append(line)
 		count += 1
 		if count % 1000 == 0:
-					print(len(data))
-print(len(data))
-print(data[0])
+			print(len(data))
+print('檔案讀取完畢, 總共有', len(data), '筆資料')
+
+sum_len = 0
+for d in data:
+	sum_len += len(d)
+	
+print('連癌的平均長度是', sum_len/len(data))
